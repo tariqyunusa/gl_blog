@@ -59,7 +59,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, debitis qui! Tenetur, labore veritatis quo obcaecati voluptate quos quidem illo odit dolore corporis in numquam beatae, porro cum, fuga reprehenderit.
         </a>
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
