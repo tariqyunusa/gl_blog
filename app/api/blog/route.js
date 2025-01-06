@@ -8,7 +8,7 @@ import { NextResponse } from "next/server.js";
 const LoadDB = async () => {
   await connectDB();
 };
-LoadDB();
+// LoadDB();
 
 export async function POST(request) {
   const formData = await request.formData();
@@ -32,4 +32,9 @@ export async function POST(request) {
   console.log("blog saved");
 
   return NextResponse.json({ success: true, msg: "blog saved" });
+}
+
+export async function GET(request) {
+  const blogs = await BlogModel.find({})
+  return NextResponse.json({blogs})
 }

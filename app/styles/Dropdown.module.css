@@ -1,0 +1,14 @@
+.admin__dropdown{
+    width: 9.75rem;
+    height: 3rem;
+    background-color: #fff;
+    outline: none;
+    padding-inline: 1rem;
+    border: none;
+}
+.admin__dropdown_option{
+    color: #000;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+}
