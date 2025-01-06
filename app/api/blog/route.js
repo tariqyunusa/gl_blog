@@ -1,4 +1,4 @@
-import { writeFile } from "fs";
+import { writeFile } from "fs/promises";
 import { connectDB } from "@/app/lib/configs/db";
 import { title } from "process";
 import BlogModel from "../../lib/models/blogModel.js";
@@ -8,7 +8,7 @@ import { NextResponse } from "next/server.js";
 const LoadDB = async () => {
   await connectDB();
 };
-// LoadDB();
+LoadDB();
 
 export async function POST(request) {
   const formData = await request.formData();
@@ -21,10 +21,10 @@ export async function POST(request) {
   const imgUrl = `/${timeStamp}_${image.name}`
 
   const blogData = {
-    title: `${formData.get("title")}`,
-    category: `${formData.get("category")}`,
-    description: `${formData.get("description")}`,
-    content: `${formData.get("content")}`,
+    Title: `${formData.get("Title")}`,
+    Category: `${formData.get("Category")}`,
+    Description: `${formData.get("Description")}`,
+    Article: `${formData.get("Article")}`,
     image: `${imgUrl}`,
     date: new Date(),
   };
@@ -34,7 +34,7 @@ export async function POST(request) {
   return NextResponse.json({ success: true, msg: "blog saved" });
 }
 
-export async function GET(request) {
+export async function GET() {
   const blogs = await BlogModel.find({})
   return NextResponse.json({blogs})
 }

@@ -1,0 +1,72 @@
+.add__product{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__container{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    padding: 2rem 0;
+
+}
+.form{
+    margin-top: 2rem;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    width: 31.25rem;
+}
+.input__form_admin{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1rem 0;
+    margin-bottom: 0.7rem;
+    font-size: 0.75rem;
+    transition: border 0.3s ease-in-out;
+}
+.input__form_admin:focus{
+    border-bottom: 1px solid #101010;
+}
+.input__form_admin::placeholder{
+    font-size: 1rem;
+}
+.input__form_admin_select{
+    width: 6.17rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 1rem;
+    padding: 0.7rem 0;
+    /* color: #e3e3e3; */
+
+}
+.input__form_admin_select::selection{
+    color: #101010;
+}
+.input__form_admin_text_area{
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 1rem;
+    transition: border 0.3s ease-in-out;
+}
+.input__form_admin_text_area::placeholder{
+    font-size: 1rem;
+}
+.input__form_admin_text_area:focus{
+    border-bottom: 1px solid #101010;
+}
+.input__form_admin_cta{
+    height: 52px;
+    margin-top: 1rem;
+    padding: 1rem;
+    outline: none;
+    width: 150px;
+    border: none;
+    background-color: #e3e3e3;
+}
