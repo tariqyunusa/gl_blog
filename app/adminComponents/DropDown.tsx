@@ -15,7 +15,7 @@ const DropDown = () => {
 
   return (
     <select className={styles.admin__dropdown} onChange={handleChange}>
-      <option value="/admin/New" className={styles.admin__dropdown_option}>New</option>
+      <option value="/admin" className={styles.admin__dropdown_option}>New</option>
       <option value="/admin/Catalog" className={styles.admin__dropdown_option}>Catalog</option>
     </select>
   )
