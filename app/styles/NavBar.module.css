@@ -6,6 +6,8 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 2rem;
+    position: sticky;
+    top: 0;
 }
 
 .NavBar__logo{

@@ -14,7 +14,7 @@ const page = () => {
     Description: "",
     Article: ""
   })
-  const onChangeHandler = (event: any) => {
+  const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const name = event.target.name
     const value = event.target.value
     setData(data => ({...data, [name]:value}))
