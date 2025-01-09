@@ -8,7 +8,12 @@ import Image from "next/image";
 
 export default function Home() {
   interface Blog {
-    Title: string;
+    Title: String ;
+    Category: String;
+    Description: String;
+    Article: String;
+    image: String ;
+
   }
 
   const [data, setData] = useState<Blog[]>([])
@@ -26,7 +31,7 @@ export default function Home() {
     <NavBar />
    <div>
     <section>
-    
+    {data && data.length > 0 ? <Image src={data[0].image} alt={data[0].Title} width={1000} height={600} />: "no image"}
     </section>
    </div>
     </>
