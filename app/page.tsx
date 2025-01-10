@@ -4,6 +4,7 @@ import NavBar from "./adminComponents/NavBar";
 import axios from "axios";
 import Image from "next/image";
 import Blog from "./clientComponents/Blog";
+import styles from './page.module.css'
 
 export default function Home() {
   interface BlogData {
@@ -15,6 +16,7 @@ export default function Home() {
   }
 
   const [data, setData] = useState<BlogData[]>([])
+
   
   const fetchData = async () => {
     try {
@@ -29,13 +31,14 @@ export default function Home() {
   useEffect(() => {
     fetchData()
   }, [])
+  const slicedData = data.length > 0 ? data.slice(0, 6) : []
 
   return (
     <>
       <NavBar />
       <div>
-        <section>
-          {data && data.length > 0 ? data.map((_, idx) => (<Blog data={data} key={idx}/>)) : "no blog"}
+        <section className={styles.client__section_first}>
+         <Blog data={slicedData} />
           
         </section>
       </div>

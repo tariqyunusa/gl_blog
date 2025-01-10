@@ -1,14 +1,16 @@
 .blog__client{
-    width: 26.688rem;
-    height: 25.125rem;
+    width: 427px;
+    height: 402px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-inline: 4rem;
 }
 .blog__client_img{
     position: relative;
-    width: 427px;
+    width: 507px;
     height: 283px;
+    aspect-ratio: 4/3;
 }
 .blog__client_info{
     display: flex;
