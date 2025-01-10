@@ -16,8 +16,8 @@ const Blog = ({ Data }: BlogProps) => {
   return (
     <>
       {Data && Data.length > 0 ? (
-        Data.map((blog) => (
-          <div key={blog.id} className={styles.blog__list_admin}>
+        Data.map((blog, idx) => (
+          <div key={idx} className={styles.blog__list_admin}>
             <div className={styles.blog__list_admin_info}>
               <h1 className={styles.blog__list_admin_info_title}>
                 {blog.Title ? blog.Title : "No Title"}

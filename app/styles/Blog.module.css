@@ -1,0 +1,17 @@
+.blog__client{
+    width: 26.688rem;
+    height: 25.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.blog__client_img{
+    position: relative;
+    width: 427px;
+    height: 283px;
+}
+.blog__client_info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

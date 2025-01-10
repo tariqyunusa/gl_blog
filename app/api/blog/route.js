@@ -16,7 +16,7 @@ export async function POST(request) {
   const image = formData.get("image");
   const imageByteData = await image.arrayBuffer()
   const buffer =  Buffer.from(imageByteData)
-  const path = `./public/${timeStamp}_${image.name}.png`
+  const path = `./public/${timeStamp}_${image.name}`
   await writeFile(path, buffer)
   const imgUrl = `/${timeStamp}_${image.name}`
 

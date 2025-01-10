@@ -3,37 +3,42 @@ import { useEffect, useState } from "react";
 import NavBar from "./adminComponents/NavBar";
 import axios from "axios";
 import Image from "next/image";
-
-
+import Blog from "./clientComponents/Blog";
 
 export default function Home() {
-  interface Blog {
-    Title: String ;
-    Category: String;
-    Description: String;
-    Article: String;
-    image: String ;
-
+  interface BlogData {
+    Title: string;
+    Category: string;
+    Description: string;
+    Article: string;
+    image: string;
   }
 
-  const [data, setData] = useState<Blog[]>([])
-  const fetchData =  async () => {
-    const response = await axios.get('/api/blog')
-    setData(response.data.blogs)
-    console.log(response.data.blogs)
+  const [data, setData] = useState<BlogData[]>([])
+  
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('/api/blog')
+      setData(response.data.blogs)
+      // console.log(response.data.blogs)
+    } catch (error) {
+      console.error("Error fetching data:", error)
+    }
   }
+
   useEffect(() => {
     fetchData()
-  },[])
+  }, [])
 
   return (
     <>
-    <NavBar />
-   <div>
-    <section>
-    {data && data.length > 0 ? <Image src={data[0].image} alt={data[0].Title} width={1000} height={600} />: "no image"}
-    </section>
-   </div>
+      <NavBar />
+      <div>
+        <section>
+          {data && data.length > 0 ? data.map((_, idx) => (<Blog data={data} key={idx}/>)) : "no blog"}
+          
+        </section>
+      </div>
     </>
   );
 }
