@@ -31,12 +31,12 @@ export default function Home() {
   useEffect(() => {
     fetchData()
   }, [])
-  const slicedData = data.length > 0 ? data.slice(0, 6) : []
+  const slicedData = data.length > 0 ? data.slice(6, 12) : []
 
   return (
     <>
       <NavBar />
-      <div>
+      <div className={styles.body__client}>
         <section className={styles.client__section_first}>
          <Blog data={slicedData} />
           
