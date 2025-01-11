@@ -7,8 +7,9 @@
 }
 .body__client{
     width: 100%;
- 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding-inline: 2rem;
 }
