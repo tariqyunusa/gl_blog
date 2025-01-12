@@ -13,3 +13,11 @@
     flex-direction: column;
     padding-inline: 2rem;
 }
+.more__picks_section{
+    width: 100vw;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.more__picks_section h2{
+    font-size: calc(1rem + 2vw);
+}  

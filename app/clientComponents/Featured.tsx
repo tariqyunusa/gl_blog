@@ -12,7 +12,7 @@ interface FeaturedProps {
 }
 
 const Featured = ({data}: any): JSX.Element => {
-    console.log("featured data",data)
+    // console.log("featured data",data)
   return (
     <section className={styles.featured__wrapper}>
       <Image fill src={data.image} alt={data.Title}/>

@@ -1,6 +1,7 @@
 .featured__wrapper{
     width: 100%;
-    height: 90vh;
+    height: 85vh;
+    margin: 2rem 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -8,9 +9,12 @@
 }
 .featured__wrapper img{
     filter:brightness(0.5);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .featured__header h2{
-    font-size: calc(1rem + 2vw);
+    font-size: calc(1rem + 1vw);
 }
 .featured__content{
     position: absolute;
@@ -28,10 +32,10 @@
     gap: 1.2rem;
 }
 .featured__text h1{
-    font-size: calc(1rem + 2vw);
+    font-size: calc(1rem + 1vw);
 }
 .featured__text p{
-    font-size: calc(0.5rem + 1vw);
+    font-size: 1rem;
 }
 .featured__text button{
     padding: 1rem 2.5rem;
