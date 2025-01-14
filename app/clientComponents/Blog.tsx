@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/Blog.module.css'
 import Image from 'next/image'
 
@@ -18,7 +19,7 @@ const Blog = ({data}: BlogProps) => {
     return (
        <>
             {data ? data.map((blog, index) => (
-                <div key={index} className={styles.blog__client}>
+                <Link href={`/Blogs/${blog.Title}`} key={index} className={styles.blog__client}>
                     <div className={styles.blog__client_img}>
                         <Image src={`http://localhost:3000${blog.image}`} alt={blog.Title}  fill />
                     </div>
@@ -26,7 +27,7 @@ const Blog = ({data}: BlogProps) => {
                         <h3>{blog.Title}</h3>
                         <p>{blog.Description}</p>
                     </div>
-                </div>
+                </Link>
             )) : ""}
     </>
     )

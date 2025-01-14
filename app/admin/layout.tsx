@@ -3,7 +3,7 @@ import NavBar from "../adminComponents/NavBar";
 import { Inter } from "next/font/google";
 import { BlogProvider, useBlogContext } from "../lib/context/blogContext";
 import Loader from "../clientComponents/Loader";
-import { ReactNode } from "react";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +23,7 @@ export default function Layout({ children }: any) {
   );
 }
 function ContentWrapper({ children }: { children: React.ReactNode }) {
-  const { isLoading } = useBlogContext();
+ 
   return (
     <>
       <Loader />

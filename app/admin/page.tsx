@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import upload from '../../public/upload.png'
 import Image from 'next/image'
 import styles from '../styles/addProduct.module.css'
@@ -14,6 +14,10 @@ const page = () => {
     Description: "",
     Article: ""
   })
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const name = event.target.name
     const value = event.target.value
@@ -59,14 +63,16 @@ const page = () => {
         <textarea name="Article" value={data.Article} onChange={onChangeHandler} placeholder='Article' className={styles.input__form_admin_text_area}/>
         <p style={{marginBottom: "1rem"}}>Image</p>
         <label htmlFor="image">
-          <Image src={!image ?upload : URL.createObjectURL(image)} width={394} height={180} alt='upload' />
-        </label>
+            {isClient && (
+              <Image src={!image ? '/path/to/upload-placeholder.png' : URL.createObjectURL(image)} width={394} height={180} alt='upload' />
+            )}
+          </label>
         <input type="file" name="image" id="image" hidden required className={styles.input__form_admin_image} onChange={(e) => {
           if (e.target.files) {
             setImage(e.target.files[0]);
           }
         }} />
-        <button className={styles.input__form_admin_cta} >Add</button>
+        <button className={styles.input__form_admin_cta}>Add</button>
       </form>
       </div>
      </div>
