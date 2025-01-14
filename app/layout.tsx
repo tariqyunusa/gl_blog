@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./clientComponents/Footer";
@@ -20,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <BlogProvider>
-          <ContentWrapper>{children}</ContentWrapper>
-          <Footer />
+          <ContentWrapper>
+            {children}
+            <Footer />
+          </ContentWrapper>
         </BlogProvider>
       </body>
     </html>
@@ -30,8 +32,6 @@ export default function RootLayout({
 
 function ContentWrapper({ children }: { children: React.ReactNode }) {
   const { isLoading } = useBlogContext();
-
- 
 
   return isLoading ? <Loader /> : <>{children}</>;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/BlogAdmin.module.css";
 import { FiTrash2 } from "react-icons/fi";
 
-interface Blog {
+export interface Blog {
   id: number;
   Title: string;
   Description: string;

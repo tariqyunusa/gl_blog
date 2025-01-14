@@ -1,7 +1,9 @@
+"use client"
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import axios from 'axios';
 
 interface Blog {
+  id: number;
   Title: string;
   Category: string;
   Description: string;

@@ -1,19 +1,11 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+"use client"
+import React from "react";
 import Blog from "../../adminComponents/Blog";
 import styles from "../../styles/catalog.module.css";
+import { useBlogContext } from "@/app/lib/context/blogContext";
 
 const page = () => {
-  const [data, setData] = useState([]);
-  const fetchBlogs = async () => {
-    const response = await axios.get("/api/blog");
-    setData(response.data.blogs);
-    console.log(response.data.blogs);
-  };
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
+ const {blogs} = useBlogContext()
   return (
     <div className={styles.catalog___container}>
       <div className={styles.catalog__container}>
@@ -22,7 +14,7 @@ const page = () => {
         </div>
         <div className={styles.catalog__list}>
           <div className={styles.catalog}>
-            <Blog Data={data} />
+            <Blog Data={blogs} />
           </div>
         </div>
       </div>

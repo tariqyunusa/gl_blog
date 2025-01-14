@@ -1,6 +1,9 @@
+"use client"
 import NavBar from "../adminComponents/NavBar";
 import { Inter } from "next/font/google";
-import { BlogProvider } from "../lib/context/blogContext";
+import { BlogProvider, useBlogContext } from "../lib/context/blogContext";
+import Loader from "../clientComponents/Loader";
+import { ReactNode } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,8 +13,16 @@ const inter = Inter({
 export default function Layout({ children }: any) {
   return (
     <div className={inter.className}>
-      <NavBar />
-      <BlogProvider>{children}</BlogProvider>
+      <BlogProvider>
+        <ContentWrapper>
+        <NavBar />
+        {children}
+        </ContentWrapper>
+      </BlogProvider>
     </div>
   );
+}
+function ContentWrapper({children} : {children: React.ReactNode}) {
+const {isLoading} = useBlogContext()
+return isLoading ? <Loader /> : <>{children}</>
 }
