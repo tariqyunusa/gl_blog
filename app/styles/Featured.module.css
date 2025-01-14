@@ -37,17 +37,8 @@
 .featured__text p{
     font-size: 1rem;
 }
-.featured__text button{
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    border: 1px solid #fff;
-    background-color: transparent;
+
+.link__cta{
+    text-decoration: none;
     color: #fff;
-    cursor: pointer;
-    align-self: flex-start;
-    transition: color 0.8s ease-in-out, background-color 0.8s ease-in-out;
-}
-.featured__text button:hover{
-    color: #000;
-    background-color: #fff;
 }

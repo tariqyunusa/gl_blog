@@ -16,7 +16,6 @@ const Page = ({ params }: PageProps) => {
 
   useEffect(() => {
     params.then((resolvedParams) => {
-      console.log('Resolved Params:', resolvedParams);
       const decodedTitle = decodeURIComponent(resolvedParams.Title).trim().toLowerCase();
       setTitle(decodedTitle);
     });
@@ -29,7 +28,6 @@ const Page = ({ params }: PageProps) => {
           console.log('Comparing:', title, 'with', blogs[i].Title.trim().toLowerCase());
           if (title === blogs[i].Title.trim().toLowerCase()) {
             setData(blogs[i]);
-            console.log('Blog Data:', blogs[i]);
             break;
           }
         }

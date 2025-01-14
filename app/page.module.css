@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-inline: 2rem;
+    /* padding-inline: 2rem; */
 }
 .more__picks_section{
     width: 100vw;

@@ -1,6 +1,7 @@
 import React, { JSX } from 'react'
 import styles from '../styles/Featured.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 interface FeaturedProps {
@@ -23,7 +24,7 @@ const Featured = ({data}: any): JSX.Element => {
         <div className={styles.featured__text}>
         <h1>{data.Title}</h1>
         <p>{data.Description}</p>
-        <button>Read More</button>
+        <Link href={`/Blogs/${data.Title}`} className={styles.link__cta}>Read More</Link>
         </div>
         <div className={styles.featured__redundant}></div>
       </div>
