@@ -33,5 +33,10 @@ export default function RootLayout({
 function ContentWrapper({ children }: { children: React.ReactNode }) {
   const { isLoading } = useBlogContext();
 
-  return isLoading ? <Loader /> : <>{children}</>;
+  return (
+    <>
+      <Loader />
+      {children}
+    </>
+  );
 }

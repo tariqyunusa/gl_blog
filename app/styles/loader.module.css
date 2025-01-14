@@ -1,0 +1,19 @@
+.loader__container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.loader__container_text{
+    display: flex;   
+}
+.loader__container_text span h1{
+    font-size: 4rem;
+    color: #fff;
+}

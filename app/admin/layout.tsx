@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import NavBar from "../adminComponents/NavBar";
 import { Inter } from "next/font/google";
 import { BlogProvider, useBlogContext } from "../lib/context/blogContext";
@@ -15,14 +15,19 @@ export default function Layout({ children }: any) {
     <div className={inter.className}>
       <BlogProvider>
         <ContentWrapper>
-        <NavBar />
-        {children}
+          <NavBar />
+          {children}
         </ContentWrapper>
       </BlogProvider>
     </div>
   );
 }
-function ContentWrapper({children} : {children: React.ReactNode}) {
-const {isLoading} = useBlogContext()
-return isLoading ? <Loader /> : <>{children}</>
+function ContentWrapper({ children }: { children: React.ReactNode }) {
+  const { isLoading } = useBlogContext();
+  return (
+    <>
+      <Loader />
+      {children}
+    </>
+  );
 }

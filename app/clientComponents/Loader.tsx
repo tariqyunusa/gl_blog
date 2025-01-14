@@ -1,21 +1,46 @@
 "use client"
-import React, {useEffect} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useBlogContext } from '../lib/context/blogContext';
-// import styles from '../styles/loader.module.css';
-
+import styles from '../styles/loader.module.css';
+import gsap from 'gsap';
 
 const Loader = () => {
-  const {  fetchBlogs} = useBlogContext();
+  const { fetchBlogs, isLoading } = useBlogContext();
+  const loaderRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const animate = () => {
+    const tl = gsap.timeline();
+    tl.to(loaderRef.current, {
+      y: "-100%",
+      duration: 1,
+      ease: 'power2.inOut',
+      onComplete: () => {
+        setIsVisible(false); 
+      },
+    });
+  };
+
   useEffect(() => {
-    fetchBlogs()
-  },[])
+    fetchBlogs();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      animate();
+    }
+  }, [isLoading]);
+
+  if (!isVisible) {
+    return null; 
+  }
 
   return (
-    <div >
-      <div>
-        <div ></div>
+    <div className={styles.loader__container} ref={loaderRef}>
+      <div className={styles.loader__container_text}>
+        <span><h1>G</h1></span>
+        <span><h1>L</h1></span>
       </div>
-      <p>Loading...</p>
     </div>
   );
 };

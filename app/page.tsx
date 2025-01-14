@@ -19,24 +19,7 @@ export default function Home() {
     image: string;
   }
 
-  // const [data, setData] = useState<BlogData[]>([])
   const {blogs: data} = useBlogContext()
-
-
-  
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get('/api/blog')
-  //     setData(response.data.blogs)
-  //     // console.log(response.data.blogs)
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
   const featured = data[Math.floor(Math.random() * data.length)]
   const slicedData = data.slice(6, 12)
   const pickMore = () => {
