@@ -11,3 +11,11 @@
     font-size: 3rem;
     font-weight: 500;
 }
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .footer__info h1{
+        font-size: 1.5rem;
+    }
+    .footer p{
+        font-size: 0.5rem;
+    }
+}

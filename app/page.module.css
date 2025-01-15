@@ -21,3 +21,16 @@
 .more__picks_section h2{
     font-size: calc(1rem + 2vw);
 }  
+@media screen and (min-width: 240px) and (max-width:768px) {
+    .client__section_first{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .more__picks_section{
+        padding: 1rem;
+    }
+
+}

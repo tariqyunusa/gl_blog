@@ -24,8 +24,8 @@ const Blog = ({data}: BlogProps) => {
                         <Image src={`http://localhost:3000${blog.image}`} alt={blog.Title}  fill />
                     </div>
                     <div className={styles.blog__client_info}>
-                        <h3>{blog.Title}</h3>
-                        <p>{blog.Description}</p>
+                        <h3 className={styles.blog__client_info_h3}>{blog.Title}</h3>
+                        <p className={styles.blog__client_info_p}>{blog.Description}</p>
                     </div>
                 </Link>
             )) : ""}

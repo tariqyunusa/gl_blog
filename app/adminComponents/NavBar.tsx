@@ -9,8 +9,8 @@ const inspiration = Inspiration({subsets: ["latin"], weight: "400"})
 const NavBar = () => {
   return (
     <nav className={styles.admin__navbar}>
-        <div />
-        <div>
+        <div className={styles.admin__navbar_filler} />
+        <div className={styles.admin__navbar_logo}>
             <h1 className={`${inspiration.className} ${styles.NavBar__logo}`}>GL</h1>
         </div>
         <DropDown />

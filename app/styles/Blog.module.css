@@ -10,16 +10,43 @@
 }
 .blog__client_img{
     position: relative;
-    width: 31.688rem;
+    width: 100%;
     height: 17.688rem;
 }
 .blog__client_info{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
 }
 .blog__client_img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+@media screen and (min-width: 240px) and (max-width:768px){
+    .blog__client{
+        flex-direction: row;
+        /* gap: 1rem; */
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        width: 100%;
+    }
+    .blog__client_img{
+        order: 2;
+        width: 150px;
+        height: 80px;
+        
+    }
+    .blog__client_info_h3{
+        font-size: 0.8rem;
+    }
+    .blog__client_info_p{
+        font-size: 0.5rem;
+    }
+    .blog__client_info{
+        order: 1;
+        gap: 0;
+    }
 }

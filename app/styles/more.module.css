@@ -41,3 +41,33 @@
 .more__pick_text p{
     font-size: 1rem;
 }
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .more__picks{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .more__pick{
+        flex-direction: row;
+        padding: 0.5rem;
+        width: 100%;
+        /* justify-content: center; */
+        align-items: center;
+
+    }
+    .more__pick_img{
+        order: 2;
+        width: 150px;
+        height: 80px;
+    }
+    .more__pick_text h3{
+        font-size: 0.8rem;
+    }
+    .more__pick_text p{
+        font-size: 0.5rem;
+    }
+    .more__pick_text{
+        order: 1;
+        width: 100%;
+    }
+}
