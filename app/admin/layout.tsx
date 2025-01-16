@@ -3,6 +3,7 @@ import NavBar from "../adminComponents/NavBar";
 import { Inter } from "next/font/google";
 import { BlogProvider, useBlogContext } from "../lib/context/blogContext";
 import Loader from "../clientComponents/Loader";
+import Footer from '../clientComponents/Footer'
 
 
 const inter = Inter({
@@ -12,11 +13,12 @@ const inter = Inter({
 
 export default function Layout({ children }: any) {
   return (
-    <div className={inter.className}>
+    <div >
       <BlogProvider>
         <ContentWrapper>
           <NavBar />
           {children}
+          <Footer />
         </ContentWrapper>
       </BlogProvider>
     </div>

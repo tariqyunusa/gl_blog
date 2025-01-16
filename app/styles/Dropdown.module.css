@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 240px) and (max-width: 768px) {
     .admin__dropdown{
-        display: none;
+        /* display: none; */
     }
 }
       

@@ -32,4 +32,7 @@
         margin: 0;
         font-size: 2rem;
     }
+    .admin__navbar{
+        padding-inline: 1rem;
+    }
 }

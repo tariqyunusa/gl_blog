@@ -29,3 +29,11 @@
 .blog__list_admin_action:hover{
     color: red;
 }
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .blog__list_admin_info_title{
+        font-size: 1rem;
+    }
+    .blog__list_admin_info_desc{
+        font-size: 0.7rem;
+    }
+}
