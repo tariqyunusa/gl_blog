@@ -16,11 +16,11 @@ const Footer = () => {
   return (
     <footer className={`${styles.footer} `}>
       <div className={styles.footer__info}>
-        <h1 className={`${inspiration.className}`}>GL</h1>
-        <p>All rights reserved © {year}</p>
+        <h1 className={`${inspiration.className}`} data-animation = 'header'>GL</h1>
+        <p data-animation = 'paragraph'>All rights reserved © {year}</p>
       </div>
       <div>
-        <p>Designed and Developed by Tariq Yunusa</p>
+        <p data-animation = 'paragraph'>Designed and Developed by Tariq Yunusa</p>
       </div>
     </footer>
   )

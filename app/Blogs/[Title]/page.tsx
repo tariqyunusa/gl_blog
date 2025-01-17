@@ -43,12 +43,12 @@ const Page = ({ params }: PageProps) => {
         <section className={styles.blog__page_section}>
         <div className={styles.blog__page_article}>
           <div className={styles.blog__page_article_img}>
-            <Image src={data.image} fill alt={data.Title}/>
+            <Image src={data.image} fill alt={data.Title} data-animation = 'header'/>
           </div>
           <div className={styles.blog__page_article_piece}>
-            <div><h1>{data.Title}</h1></div>
-            <div><p>{data.Description}</p></div>
-            <div><p>{data.Article}</p></div>
+            <div><h1 data-animation = 'header'>{data.Title}</h1></div>
+            <div><p data-animation = 'paragraph'>{data.Description}</p></div>
+            <div><p data-animation = 'paragraph'>{data.Article}</p></div>
           </div>
         </div>
         </section>

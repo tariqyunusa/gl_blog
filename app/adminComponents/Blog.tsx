@@ -17,16 +17,16 @@ const Blog = ({ Data }: BlogProps) => {
     <>
       {Data && Data.length > 0 ? (
         Data.map((blog, idx) => (
-          <div key={idx} className={styles.blog__list_admin}>
+          <div key={idx} className={styles.blog__list_admin} data-animation = 'paragraph'>
             <div className={styles.blog__list_admin_info}>
-              <h1 className={styles.blog__list_admin_info_title}>
+              <h1 className={styles.blog__list_admin_info_title} data-animation = 'header'>
                 {blog.Title ? blog.Title : "No Title"}
               </h1>
-              <p className={styles.blog__list_admin_info_desc}>
+              <p className={styles.blog__list_admin_info_desc} >
                 {blog.Description ? blog.Description : "No Description"}
               </p>
             </div>
-            <div className={styles.blog__list_admin_action}>
+            <div className={styles.blog__list_admin_action} data-animation = 'header'>
               <FiTrash2 />
             </div>
           </div>

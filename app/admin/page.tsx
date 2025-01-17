@@ -50,29 +50,29 @@ const Page = () => {
     <div className={styles.add__product}>
       <div className={styles.form__container}>
         <div>
-          <h1>Add Blog</h1>
+          <h1 data-animation = 'header'>Add Blog</h1>
         </div>
         <div>
           <form className={styles.form} onSubmit={onSubmitHandler}>
-            <input type="text" name="Title" onChange={onChangeHandler} value={data.Title} placeholder='Title' className={styles.input__form_admin} />
-            <select name='Category' value={data.Category} onChange={onChangeHandler} className={styles.input__form_admin_select}>
+            <input type="text" name="Title" onChange={onChangeHandler} value={data.Title} placeholder='Title' className={styles.input__form_admin} data-animation = 'paragraph'/>
+            <select name='Category' value={data.Category} onChange={onChangeHandler} className={styles.input__form_admin_select} data-animation = 'paragraph'>
               <option value="Tech">Tech</option>
               <option value="Tech">Tech</option>
               <option value="Tech">Tech</option>
               <option value="Tech">Tech</option>
             </select>
-            <input type="text" name="Description" value={data.Description} onChange={onChangeHandler} maxLength={100} placeholder='Description' className={styles.input__form_admin} />
-            <textarea name="Article" value={data.Article} onChange={onChangeHandler} placeholder='Article' className={styles.input__form_admin_text_area} />
-            <p style={{ marginBottom: "1rem" }}>Image</p>
-            <label htmlFor="image">
-              <Image src={image ? URL.createObjectURL(image) : upload } width={394} height={180} alt='upload' />
+            <input type="text" name="Description" value={data.Description} onChange={onChangeHandler} maxLength={100} placeholder='Description' className={styles.input__form_admin} data-animation = 'paragraph'/>
+            <textarea name="Article" value={data.Article} onChange={onChangeHandler} placeholder='Article' className={styles.input__form_admin_text_area} data-animation = 'paragraph'/>
+            <p style={{ marginBottom: "1rem" }} data-animation = 'paragraph'>Image</p>
+            <label htmlFor="image" data-animation = 'paragraph'>
+              <Image src={image ? URL.createObjectURL(image) : upload } width={394} height={180} alt='upload' data-animation = 'paragraph' />
             </label>
             <input type="file" name="image" id="image" hidden required className={styles.input__form_admin_image} onChange={(e) => {
               if (e.target.files) {
                 setImage(e.target.files[0]);
               }
             }} />
-            <button className={styles.input__form_admin_cta}>Add</button>
+            <button className={styles.input__form_admin_cta} data-animation = 'paragraph'>Add</button>
           </form>
         </div>
       </div>

@@ -44,7 +44,7 @@ export default function Home() {
         {featured && <Featured data={featured} />}
         <section className={styles.more__picks_section}>
           <div className={styles.more__picks}>
-            <h2>More Picks For You</h2>
+            <h2 data-animation = 'header'>More Picks For You</h2>
            <More picks={pickMore() || []}/>
           </div>
         </section>

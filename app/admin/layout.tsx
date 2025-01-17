@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { BlogProvider, useBlogContext } from "../lib/context/blogContext";
 import Loader from "../clientComponents/Loader";
 import Footer from '../clientComponents/Footer'
+import { useEffect } from "react";
+import { textReveal } from "../lib/animations/textReveal";
 
 
 const inter = Inter({
@@ -12,6 +14,9 @@ const inter = Inter({
 });
 
 export default function Layout({ children }: any) {
+  useEffect(() => {
+    textReveal()
+  },[])
   return (
     <div >
       <BlogProvider>

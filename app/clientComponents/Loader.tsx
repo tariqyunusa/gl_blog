@@ -38,8 +38,8 @@ const Loader = () => {
   return (
     <div className={styles.loader__container} ref={loaderRef}>
       <div className={styles.loader__container_text}>
-        <span><h1>G</h1></span>
-        <span><h1>L</h1></span>
+        <span><h1 data-animation = 'header'>G</h1></span>
+        <span><h1 data-animation = 'header'>L</h1></span>
       </div>
     </div>
   );
