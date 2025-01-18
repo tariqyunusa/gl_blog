@@ -1,14 +1,13 @@
 "use client"
-import { useEffect, useState } from "react";
+
 import NavBar from "./adminComponents/NavBar";
-import axios from "axios";
-import Image from "next/image";
+
 import Blog from "./clientComponents/Blog";
 import styles from './page.module.css'
 import Featured from "./clientComponents/Featured";
 import More from "./clientComponents/More";
 import { useBlogContext } from "./lib/context/blogContext";
-import Loader from "./clientComponents/Loader";
+
 
 export default function Home() {
   interface BlogData {
@@ -32,6 +31,7 @@ export default function Home() {
     return picked
   }
   pickMore()
+   
   
 
   return (

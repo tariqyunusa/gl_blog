@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/more.module.css'
 import Link from 'next/link';
+import useTextReveal from '../lib/hooks/useTextReveal';
 
 interface Pick {
   image: string;
@@ -10,6 +11,7 @@ interface Pick {
 }
 
 const More = ({ picks }: { picks: Pick[] }) => {
+   
   return (
     <div className={styles.more__picks}>
       {picks && picks.length > 0 && (

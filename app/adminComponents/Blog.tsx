@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/BlogAdmin.module.css";
 import { FiTrash2 } from "react-icons/fi";
 
+
 export interface Blog {
   id: number;
   Title: string;
@@ -13,6 +14,7 @@ interface BlogProps {
 }
 
 const Blog = ({ Data }: BlogProps) => {
+   
   return (
     <>
       {Data && Data.length > 0 ? (

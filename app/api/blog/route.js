@@ -1,8 +1,6 @@
 import { writeFile } from "fs/promises";
 import { connectDB } from "@/app/lib/configs/db";
-import { title } from "process";
 import BlogModel from "../../lib/models/blogModel.js";
-import { log } from "console";
 import { NextResponse } from "next/server.js";
 
 const LoadDB = async () => {

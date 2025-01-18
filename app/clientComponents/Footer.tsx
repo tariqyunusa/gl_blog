@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/footer.module.css'
 import { Inspiration } from 'next/font/google'
+import useTextReveal from '../lib/hooks/useTextReveal'
 
 const inspiration = Inspiration({subsets: ["latin"], weight: "400"})
 
@@ -12,6 +13,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear().toString()
     setYear(currentYear)
   }, [])
+   
 
   return (
     <footer className={`${styles.footer} `}>

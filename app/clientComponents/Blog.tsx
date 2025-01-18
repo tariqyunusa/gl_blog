@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/Blog.module.css'
 import Image from 'next/image'
+import useTextReveal from '../lib/hooks/useTextReveal';
 
 interface BlogData {
     Title: string;
@@ -16,6 +17,7 @@ interface BlogProps {
 
 const Blog = ({data}: BlogProps) => {
  
+     
     return (
        <>
             {data ? data.map((blog, index) => (

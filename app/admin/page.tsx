@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../styles/addProduct.module.css';
 import axios from 'axios';
 
+
 const Page = () => {
   const [image, setImage] = useState<File | null>(null);
   const [data, setData] = useState({
@@ -45,6 +46,7 @@ const Page = () => {
       console.log("added new post!!!");
     }
   };
+   
 
   return (
     <div className={styles.add__product}>

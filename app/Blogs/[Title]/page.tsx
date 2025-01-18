@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../../styles/BlogPage.module.css'
 import NavBar from '@/app/adminComponents/NavBar';
 
+
 interface PageProps {
   params: Promise<{ Title: string }>;
 }
@@ -13,6 +14,7 @@ const Page = ({ params }: PageProps) => {
   const [data, setData] = useState<any>(null);
   const [title, setTitle] = useState<string | null>(null);
   const { blogs } = useBlogContext();
+   
 
   useEffect(() => {
     params.then((resolvedParams) => {
