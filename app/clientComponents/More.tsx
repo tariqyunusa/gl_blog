@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/more.module.css'
 import Link from 'next/link';
-import useTextReveal from '../lib/hooks/useTextReveal';
+
 
 interface Pick {
   image: string;

@@ -3,9 +3,9 @@ import React from "react";
 import Blog from "../../adminComponents/Blog";
 import styles from "../../styles/catalog.module.css";
 import { useBlogContext } from "@/app/lib/context/blogContext";
-import useTextReveal from "@/app/lib/hooks/useTextReveal";
 
-const page = () => {
+
+const Page = () => {
  const {blogs} = useBlogContext()
   
   return (
@@ -24,4 +24,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

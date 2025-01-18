@@ -2,7 +2,7 @@
 import './globals.css';
 import { BlogProvider } from './lib/context/blogContext';
 import Loader from './clientComponents/Loader'
-import useTextReveal from './lib/hooks/useTextReveal';
+
 
 
 

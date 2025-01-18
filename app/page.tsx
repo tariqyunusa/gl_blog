@@ -21,9 +21,9 @@ export default function Home() {
   const {blogs: data} = useBlogContext()
   const featured = data[Math.floor(Math.random() * data.length)]
   const slicedData = data.slice(6, 12)
-  const pickMore = () => {
+  const pickMore = (): BlogData[] => {
     if(!data) return [];
-    let picked: BlogData[] = []
+    const picked: BlogData[] = []
     for (let i = 0; i < 4; i++) {
       const randomPicks = Math.floor(Math.random() * data.length)
       picked.push(data[randomPicks])

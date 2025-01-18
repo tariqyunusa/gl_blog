@@ -2,18 +2,18 @@ import React, { JSX } from 'react'
 import styles from '../styles/Featured.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import useTextReveal from '../lib/hooks/useTextReveal';
+
 
 
 interface FeaturedProps {
   data: {
     image: string;
-    title: string;
-    description: string
+    Title: string;
+    Description: string
   };
 }
 
-const Featured = ({data}: any): JSX.Element => {
+const Featured = ({data}: FeaturedProps): JSX.Element => {
    
     // console.log("featured data",data)
   return (

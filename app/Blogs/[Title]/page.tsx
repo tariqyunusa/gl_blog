@@ -11,7 +11,14 @@ interface PageProps {
 }
 
 const Page = ({ params }: PageProps) => {
-  const [data, setData] = useState<any>(null);
+  interface BlogData {
+    Title: string;
+    Description: string;
+    Article: string;
+    image: string;
+  }
+
+  const [data, setData] = useState<BlogData | null>(null);
   const [title, setTitle] = useState<string | null>(null);
   const { blogs } = useBlogContext();
    

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useBlogContext } from '../lib/context/blogContext';
 import styles from '../styles/loader.module.css';
 import gsap from 'gsap';
-import useTextReveal from '../lib/hooks/useTextReveal';
+
 
 const Loader = () => {
   const { fetchBlogs, isLoading } = useBlogContext();
