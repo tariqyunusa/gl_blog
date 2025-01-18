@@ -19,7 +19,7 @@ const More = ({ picks }: { picks: Pick[] }) => {
           pick && pick.image && pick.Title && pick.Description ? (
             <Link href={`/Blogs/${pick.Title}`} key={idx} className={`${styles.more__pick}`}>
               <div className={styles.more__pick_img}>
-                <Image src={`http://localhost:3000${pick.image}`} alt={pick.Title}  fill data-animation = 'header'/>
+                <Image src={`${pick.image}`} alt={pick.Title}  fill data-animation = 'header'/>
               </div>
               <div className={styles.more__pick_text}>
                 <h3 data-animation = 'header'>{pick.Title}</h3>
